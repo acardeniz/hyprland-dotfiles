@@ -1,6 +1,7 @@
 # My Hyprland Dotfiles
 
 Opinionated and fixed Hyprland configuration
+
 Original Source: https://github.com/pewdiepie-archdaemon/dionysus.git
 
 ## Components
@@ -10,6 +11,7 @@ Original Source: https://github.com/pewdiepie-archdaemon/dionysus.git
 - Rofi (app launcher)
 - Alacritty (terminal)
 - CAVA (audio visualizer)
+- Playerctl (Spotify script)
 
 ## Installation
 ```bash
