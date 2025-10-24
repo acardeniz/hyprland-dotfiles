@@ -1,0 +1,16 @@
+;; ── welcome text───────────────────────────────────────────────────
+;; Text displaying date and weather in cyrilic
+;; Anchored right screen
+
+(defwindow welcome_text
+  :visible show_eww
+  :anchor "top"
+  :monitor 0
+  :geometry (geometry :x "1740px" :y "152px" :width "100px" :height "90px")
+  :stacking "bg"
+  :exclusive false
+  :focusable false
+
+  (box :orientation "vertical" :halign "end" :class "stats-box" :space "1px"
+
+))
