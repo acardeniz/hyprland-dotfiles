@@ -1,6 +1,7 @@
 # My Hyprland Dotfiles
 
-Arch Linux + Hyprland configuration
+Opinionated and fixed Hyprland configuration
+Original Source: https://github.com/pewdiepie-archdaemon/dionysus.git
 
 ## Components
 - Hyprland (wayland compositor)
@@ -13,7 +14,7 @@ Arch Linux + Hyprland configuration
 ## Installation
 ```bash
 # Clone repo
-git clone https://github.com/KULLANICI_ADIN/hyprland-dotfiles.git
+git clone https://github.com/acardeniz/hyprland-dotfiles.git
 cd hyprland-dotfiles
 
 # Copy configs
