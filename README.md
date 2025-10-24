@@ -26,4 +26,4 @@ cp -r cava ~/.config/
 ```
 
 ## Screenshots
-(Ekran görüntüleri ekle)
+![Waybar Screenshot](waybar.png)
