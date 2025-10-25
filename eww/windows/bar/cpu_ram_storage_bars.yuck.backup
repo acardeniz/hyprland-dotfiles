@@ -18,7 +18,7 @@
     (box :class "module-frame" :orientation "vertical" :halign "start" :style "margin-top: -8px;"
         (label :text cpu_bar :class "ram-bar")
       )
-       (box :class "module-frame" :orientation "vertical" :halign "start" :style "min-width: 38px; padding: 1px;"  
+       (box :class "module-frame" :orientation "vertical" :halign "start" :style "min-width: 40px; padding: 0px;"  
         (label :text cpu_usage :class "ram-bar2" :halign "center"))
     
     )

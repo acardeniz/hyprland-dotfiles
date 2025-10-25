@@ -209,10 +209,9 @@ window {
 
 .ram-bar2 {
   color: #9cdef2;
-  letter-spacing: 0.5px;
+  letter-spacing: 1.5px;
   padding: 1px 1px;
-  font-size: 9px;
-  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 10px;
 }
 
 .ram-bar4 {
