@@ -12,8 +12,8 @@
   ;; Horizontal layout for side-by-side bars
   (box :orientation "horizontal" :halign "center" :space-evenly false :spacing 10
     ;; DOWNLOAD BAR
-    (box :orientation "vertical" :halign "center" :style "min-width: 100px;" :spacing 2
-      (label :text "[ DOWNLOAD ]"  :style "margin-top: 70px; font-size: 10px;" :class "stats-label")
+    (box :orientation "vertical" :halign "center" :spacing 2
+      (label :text "[ DD ]"  :style "margin-top: 70px;" :class "stats-label")
       (box :class "module-frame2"
         (label :text download_bar :class "ram-bar"))
       (label :text "${download_speed}%" :class "stats-value" :style "font-size: 9px; margin-top: -5px;")
@@ -26,14 +26,14 @@
       (label :text "${upload_speed}%" :class "stats-value" :style "font-size: 9px; margin-top: -5px;")
     )
     ;; LATENCY BAR
-    (box :orientation "vertical" :halign "center" :style "min-width: 91px;" :spacing 2
+    (box :orientation "vertical" :halign "center" :spacing 2
       (label :text "[ LATENCY ]"  :style "margin-top: 70px;" :class "stats-label")
       (box :class "module-frame2"
         (label :text ping_bar :class "ram-bar"))
       (label :text "${ping_ms} ms" :class "stats-value" :style "font-size: 9px; margin-top: -5px;")
     )
     ;; VPN BAR
-    (box :orientation "vertical" :halign "center" :style "min-width: 70px;" :spacing 2
+    (box :orientation "vertical" :halign "center" :style "min-width: 81px;" :spacing 2
       (label :text "[ VPN ]" :style "margin-top: 70px;" :class "stats-label")
       (box :class "module-frame2"
         (label
