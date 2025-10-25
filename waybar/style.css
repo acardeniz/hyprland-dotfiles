@@ -1,7 +1,7 @@
 /* ──────────────────────────────────────────────────────────────────────────
    °˖* ૮(  • ᴗ ｡)っ🍸  pewdiepie/archdaemon/dionysh  shhheersh
    Waybar CSS styling
-   vers. 1.1 (Power Profile eklendi)
+   vers. 1.2 (Spotify eklendi)
    ────────────────────────────────────────────────────────────────────────── */
 
 /* === Base Waybar Styling ================================================= */
@@ -63,6 +63,7 @@ window#waybar {
 /* === Default Module Container Styling ==================================== */
 
 #custom-microphone,
+#custom-spotify,
 #bluetooth,
 #custom-bluetooth,
 #custom-brightness,
@@ -118,6 +119,26 @@ window#waybar {
   font-weight: bold;
   font-size: 12px;
   color: #fab387;
+}
+
+
+/* === Spotify ============================================================= */
+
+#custom-spotify {
+  color: #56b6c2;
+  font-weight: normal;
+}
+
+#custom-spotify.Playing {
+  color: #56b6c2;
+}
+
+#custom-spotify.Paused {
+  color: #fab387;
+}
+
+#custom-spotify.idle {
+  color: #4c566a;
 }
 
 
@@ -213,6 +234,7 @@ window#waybar {
 /* Unified look for all interactive modules                                */
 
 #custom-microphone:hover,
+#custom-spotify:hover,
 #custom-volume:hover,
 #pulseaudio:hover,
 #network:hover,

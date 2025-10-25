@@ -121,7 +121,7 @@ scripts/net/net_vpn.sh | xargs bash ~/.config/eww/scripts/net/net_vpn_bar.sh || 
     END {
       if (state == \"discharging\") exit 0;
       else if (state == \"charging\") print \"Re-establishing\";
-      else print \"N/A\"
+      else print \"4EVER\"
     }' || echo 'null'")
 
 ;; === ASCII Widgets & Feeds ===
@@ -148,3 +148,9 @@ scripts/net/net_vpn.sh | xargs bash ~/.config/eww/scripts/net/net_vpn_bar.sh || 
           :markup true
           :class "visualizer-text")))))
 
+
+;; === Workspace Windows ───────────────────────────────────────────────────────
+(defpoll ws1_window :interval "2s" "bash ~/.config/eww/scripts/sys/sys_workspace_windows.sh | grep ws1_window= | cut -d= -f2 || echo ''")
+(defpoll ws2_window :interval "2s" "bash ~/.config/eww/scripts/sys/sys_workspace_windows.sh | grep ws2_window= | cut -d= -f2 || echo ''")
+(defpoll ws3_window :interval "2s" "bash ~/.config/eww/scripts/sys/sys_workspace_windows.sh | grep ws3_window= | cut -d= -f2 || echo ''")
+(defpoll ws4_window :interval "2s" "bash ~/.config/eww/scripts/sys/sys_workspace_windows.sh | grep ws4_window= | cut -d= -f2 || echo ''")

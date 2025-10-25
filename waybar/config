@@ -1,7 +1,7 @@
 // ──────────────────────────────────────────────────────────────────────────
 //  °˖* ૮(  • ᴗ ｡)っ🍸  pewdiepie/archdaemon/dionysh shhheersh
 //  Waybar config
-//  vers. 1.1.0 (Power Profile eklendi, VPN kaldırıldı)
+//  vers. 1.2.0 (Spotify eklendi)
 // ──────────────────────────────────────────────────────────────────────────
 
 {
@@ -16,7 +16,8 @@
     "custom/power",
     "network",
     "bluetooth",
-    "custom/microphone"
+    "custom/microphone",
+    "custom/spotify"
   ],
 
   "modules-center": [
@@ -102,6 +103,16 @@
     "tooltip": true,
     "tooltip-format": "Mic Toggle",
     "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
+  },
+
+  "custom/spotify": {
+    "exec": "~/.config/waybar/scripts/spotify.sh",
+    "return-type": "json",
+    "interval": 2,
+    "on-click": "playerctl -p spotify play-pause",
+    "on-scroll-up": "playerctl -p spotify next",
+    "on-scroll-down": "playerctl -p spotify previous",
+    "escape": true
   },
 
   "custom/brightness": {
