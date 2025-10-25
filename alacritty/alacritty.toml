@@ -64,3 +64,7 @@ hide_when_typing = true
 
 [env]
 TERM = "xterm-256color"
+
+[window]
+opacity = 0.10
+blur = true
