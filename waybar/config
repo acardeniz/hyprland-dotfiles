@@ -8,8 +8,11 @@
   "layer": "top",
   "position": "top",
   "margin-top": 12,
+  "output": "eDP-1",
   "margin-bottom": -8,
-  "height": 34,
+  "margin-left": 12,
+  "margin-right": 12,
+  "height": 48,
 
   "modules-left": [
     "clock",
@@ -63,7 +66,7 @@
   "bluetooth": {
     "format": "{icon}",
     "format-icons": {
-      "enabled": "[  ]",
+      "enabled": "[󰂯 ]",
       "disabled": "[ 󰂲 ]"
     },
     "on-click": "~/.config/waybar/scripts/bluetooth-toggle.sh",

@@ -6,7 +6,12 @@
 
 # ── MONITORS ───────────────────────────────────────────────────────────────
 monitor=eDP-1,1920x1080@144,0x0,1
-monitor=HDMI-A-1,1920x1080@75,1920x0,1
+monitor=HDMI-A-1,1920x1080@75
+
+
+
+
+,1920x0,1
 
 
 
@@ -134,10 +139,10 @@ misc {
 
 # ── INPUT ──────────────────────────────────────────────────────────────────
 input {
-    kb_layout  = us,tr
+    kb_layout  = us
     kb_variant =
     kb_model   =
-    kb_options =grp:alt_shift_toggle
+    kb_options =
     kb_rules   =
 
     follow_mouse = 1
@@ -145,7 +150,7 @@ input {
 
     touchpad {
         natural_scroll = true
-	}
+    }
 }
 
 device {
@@ -165,8 +170,7 @@ bind = ALT, W, killactive,
 bind = ALT, V, togglefloating,
 bind = ALT, {, pseudo,
 bind = ALT, J, togglesplit,
-bind = ALT, SPACE, exec, sh -c 'tofi-run | xargs hyprctl dispatch exec --'
-bind = ALT, R, exec, rofi -show drun
+bind = ALT, SPACE, exec, rofi -show drun
 
 # Move focus
 bind = ALT, left,  movefocus, l

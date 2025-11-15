@@ -48,8 +48,9 @@ contentbox {
 }
 /* ── Imagebox ────────────────────────────── */
 imagebox {
-  background-image: url("~/.config/rofi/image-fixed.png", width);
-  width: 300px;
+  background-image: url("~/.config/rofi/rofi-bg.png", width);
+  background-color: transparent;
+  both: 300px;
   height: 625px;
 }
 /* ── Elements ────────────────────────────── */

@@ -1,12 +1,11 @@
 #!/bin/bash
 
-# Daha hızlı çalışması için tek komutla tüm bilgileri al
-metadata=$(playerctl -p spotify metadata 2>/dev/null)
+# Spotify durumunu kontrol et
 status=$(playerctl -p spotify status 2>/dev/null)
 
 # Spotify çalışmıyorsa
 if [ -z "$status" ]; then
-    echo '{"text": "[ 󰓇  Spotify ]", "tooltip": "Spotify is not running", "class": "idle"}'
+    echo '{"text": "󰓇 Spotify", "tooltip": "Spotify is not running", "class": "idle"}'
     exit 0
 fi
 
@@ -19,22 +18,27 @@ else
     icon="󰓇"
 fi
 
-# Metadata'dan bilgileri çıkar (daha hızlı)
-artist=$(echo "$metadata" | grep "xesam:artist" | cut -d' ' -f3- | sed 's/^[ \t]*//')
-title=$(echo "$metadata" | grep "xesam:title" | cut -d' ' -f3- | sed 's/^[ \t]*//')
+# Metadata al
+artist=$(playerctl -p spotify metadata artist 2>/dev/null)
+title=$(playerctl -p spotify metadata title 2>/dev/null)
 
 # Bilgi yoksa
 if [ -z "$artist" ] || [ -z "$title" ]; then
-    echo '{"text": "[ 󰓇  Spotify ]", "tooltip": "No track info", "class": "idle"}'
+    echo "{\"text\": \"󰓇 $icon Spotify\", \"tooltip\": \"No track info\", \"class\": \"$status\"}"
     exit 0
 fi
 
+# Özel karakterleri temizle (JSON için)
+artist=$(echo "$artist" | sed 's/"/\\"/g' | sed "s/'/\\'/g")
+title=$(echo "$title" | sed 's/"/\\"/g' | sed "s/'/\\'/g")
+
 # Metni kısalt
-max_length=35
+max_length=30
 combined="$artist - $title"
 if [ ${#combined} -gt $max_length ]; then
     combined="${combined:0:$max_length}..."
 fi
 
-# JSON çıktısı
-echo "{\"text\": \"[ 󰓇  $icon  $combined ]\", \"tooltip\": \"$artist\\n$title\\n\\nClick: Play/Pause\\nScroll: Next/Previous\", \"class\": \"$status\"}"
+# JSON çıktısı (escape edilmiş)
+printf '{"text": "󰓇 %s %s", "tooltip": "%s - %s\\n\\nClick: Play/Pause", "class": "%s"}\n' \
+    "$icon" "$combined" "$artist" "$title" "$status"

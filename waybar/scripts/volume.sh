@@ -15,14 +15,16 @@ is_muted=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep -q MUTED && echo true ||
 # Get default sink description (human-readable)
 sink=$(wpctl status | awk '/Sinks:/,/Sources:/' | grep '\*' | cut -d'.' -f2- | sed 's/^\s*//; s/\[.*//')
 
-# Icon logic
+# Icon logic - büyük simge
 if [ "$is_muted" = true ]; then
-  icon=""
+  icon="<span size='large'>󰖁</span>"
   vol_int=0
-elif [ "$vol_int" -lt 50 ]; then
-  icon=""
+elif [ "$vol_int" -lt 33 ]; then
+  icon="<span size='large'>󰕿</span>"
+elif [ "$vol_int" -lt 66 ]; then
+  icon="<span size='large'>󰖀</span>"
 else
-  icon=""
+  icon="<span size='large'>󰕾</span>"
 fi
 
 # ASCII bar
@@ -50,4 +52,3 @@ fi
 
 # Final JSON output
 echo "{\"text\":\"<span foreground='$fg'>$icon $ascii_bar $vol_int%</span>\",\"tooltip\":\"$tooltip\"}"
-

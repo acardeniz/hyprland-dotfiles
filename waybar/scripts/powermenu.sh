@@ -17,6 +17,6 @@ case $chosen in
     Reboot) systemctl reboot ;;
     Logout) hyprctl dispatch exit ;;
     Suspend) systemctl suspend ;;
-    Lock) ~/.config/hyprlock/lock.sh ;;
+    Lock) ~/.config/hypr/lock.sh ;;
 esac
 

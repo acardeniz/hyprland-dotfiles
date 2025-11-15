@@ -37,4 +37,3 @@ tooltip="Brightness: $percent%\nDevice: $device"
 
 # JSON output
 echo "{\"text\":\"<span foreground='$fg'>$icon $ascii_bar $percent%</span>\",\"tooltip\":\"$tooltip\"}"
-

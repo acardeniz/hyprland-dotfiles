@@ -17,8 +17,8 @@ bars = 64
 ; Choose the backend you actually use.  Here we keep *pulse* active and
 ; leave the other back‑ends commented for easy switching.
 method = pulse
-source = alsa_output.usb-Logitech_PRO_X_000000000000-00.analog-stereo.monitor
-;method = pipewire
+source = auto
+;method = pulse
 ;source = auto
 ;method = alsa
 ;source = hw:Loopback,1

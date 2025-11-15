@@ -46,4 +46,3 @@ fi
 
 # JSON output
 echo "{\"text\":\"<span foreground='$fg'>$icon $ascii_bar $capacity%</span>\",\"tooltip\":\"$tooltip\"}"
-
