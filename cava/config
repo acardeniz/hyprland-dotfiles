@@ -65,6 +65,6 @@ waves      = 0
 ; “no change”.  Example shows a flat (all‑50) EQ.
 ;1 = 50   ; bass
 ;2 = 50
-;3 = 50   ; mid‑tone
+;3 = 40   ; mid‑tone
 ;4 = 50
 ;5 = 50   ; treble
