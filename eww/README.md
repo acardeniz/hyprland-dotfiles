@@ -118,5 +118,3 @@ GPU stats require nvidia-smi.
 Network assumes wlp4s0 — change your interface name in net_* scripts.
 VPN detection looks for 10.6.0.x (NordVPN via strongSwan). Adjust if using another provider.
 
-I'm sorry in advance. God speed if you try and get this running yourself. 
-
